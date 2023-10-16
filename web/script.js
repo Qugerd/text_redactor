@@ -45,9 +45,6 @@ function changeTextColor(){
     document.execCommand("foreColor", false, color);
 }
 
-function changeLineHeight(){
-    document.execCommand("lineHeight", false, "100px");
-}
 
 function increaseFontSize(){
     const selectedText = window.getSelection().toString();
