@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="conteiner-button-function">
+        <div class="conteiner-text-format">
+            <button onclick="saveFile()">save</button>
+            <button class="toggle-button bold-button" id="bold-button" onclick="toggleBold()">Ж</button>
+            <button class="toggle-button button-italic" onclick="toggleItalic()">K</button>
+            <button class="toggle-button button-inderline" onclick="toggleUnderline()">Ч</button>
+
+            <select id="font-size-selector" onchange="changeFontSize()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+
+            <input type="color" id="color-input" onchange="changeTextColor()">
+            <button onclick="changeLineHeight()">Интеревал</button>
+        </div>
+    </div>
+
+    <div class="conteiner-text-input">
+        <div class="text-field" id="text-editor" contenteditable="true"></div>
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

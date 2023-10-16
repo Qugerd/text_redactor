@@ -1,0 +1,58 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner-button-function{
+    height: 100px;
+
+    background-color: rgba(2, 2, 2, 0.5);
+
+    display: flex;
+}
+
+.conteiner-text-format{
+    width: 400px;
+    background-color: rgba(2, 2, 2, 0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-button{
+    width: 30px;
+    height: 30px;
+}
+
+#font-size-selector, #color-input{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+.conteiner-text-input{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field{
+    height: 1200px;
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+
+    padding: 50px 30px 30px 80px;
+}
+
+.text-field:focus{
+    outline: none;
+}
