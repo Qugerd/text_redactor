@@ -59,6 +59,79 @@ function increaseFontSize(){
     }
 }
 
+function changeLineHeight(){
+    var value = document.getElementById("line-height").value
+
+    // Получаем первый диапазон (если есть несколько выделенных фрагментов)
+    var range = window.getSelection().getRangeAt(0);
+
+
+    // var currnetParent = range.commonAncestorContainer.parentNode.parentNode.tagName;
+    var currnetParent = range.commonAncestorContainer;
+
+    var fragment = range.extractContents();
+    console.log(fragment);
+
+    if (currnetParent.tagName === "SPAN"){
+        console.log(currnetParent);
+        console.log('обернут в тег <span>.');
+        currnetParent.style.lineHeight = value;
+        currnetParent.appendChild(fragment)
+
+    }
+    else{
+        // Создаем элемент <span>
+        var span = document.createElement('span');
+        span.style.lineHeight = value
+        console.log(currnetParent);
+        console.log('не обернут в тег <span>.');
+        span.appendChild(fragment);
+        range.insertNode(span);
+    }
+}
+
+
+function rightIndent(){
+    document.execCommand("indent", false, null)
+}
+
+function leftIndent(){
+    document.execCommand("outdent", false, null);
+}
+
+function toggleFont(){
+    var fontName = document.getElementById("font-selector").value
+    document.execCommand("fontName", false, fontName);
+}
+
+function insertLink(){
+    var link = prompt("Введите ссылку !")
+    if (link){
+        document.execCommand("createLink", false, link);
+    }
+}
+
+
+
+function check(){
+    var range = window.getSelection().getRangeAt(0);
+    console.log(window.getSelection().rangeCount);
+
+
+    var startNode = range.startContainer;
+    console.log(startNode);
+
+    var endNode = range.endContainer;
+    console.log(endNode);
+
+
+    var currentNode = range.commonAncestorContainer ;
+    console.log(currentNode);
+    // $(currentNode).contents().unwrap();
+}
+
+
+
 function saveFile(){
     var content = document.getElementById("text-editor").innerHTML;
     console.log(content)
@@ -66,3 +139,12 @@ function saveFile(){
 }
 
 
+
+
+document.getElementById("text-editor").addEventListener("click", function(event) {
+    if (event.target.tagName === "A") {
+        event.preventDefault(); // Предотвращаем переход по ссылке по умолчанию
+        const url = event.target.getAttribute("href");
+        window.open(url, "_blank"); // Открываем ссылку в новой вкладке
+    }
+});

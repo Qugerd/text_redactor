@@ -25,12 +25,39 @@
             </select>
 
             <input type="color" id="color-input" onchange="changeTextColor()">
-            <button onclick="changeLineHeight()">Интеревал</button>
+            <select onchange="changeLineHeight()" id="line-height">
+                <option value="1">1</option>
+                <option value="1.15">1.15</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+            </select>
+
+            <button class="toggle-button" onclick="rightIndent()">-></button>
+            <button class="toggle-button" onclick="leftIndent()"><-</button>
+
+            <select id="font-selector" onchange="toggleFont()">
+                <option value="Arial">Arial</option>
+                <option value="Calibri">Calibri</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Forte">Forte</option>
+                <option value="Impact">Impact</option>
+            </select>
+
+            <button class="toggle-button image-button" onclick="insertImage()"></button>
+            <button class="toggle-button insert-link" onclick="insertLink()"></button>
         </div>
     </div>
 
     <div class="conteiner-text-input">
-        <div class="text-field" id="text-editor" contenteditable="true"></div>
+        <div class="text-field" id="text-editor" contenteditable="true">
+            <div>fasdsadasdas</div>
+            <div>dadasdasdas</div>
+            <div>dadasdsadas</div>
+            <div>wdwdwdf</div>
+            <div>wrergraqwrgfb</div>
+        </div>
     </div>
     
 
