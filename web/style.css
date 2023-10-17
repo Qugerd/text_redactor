@@ -34,6 +34,13 @@ a{
     width: 30px;
     height: 30px;
     cursor: pointer;
+
+    margin: 0px 5px;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
 }
 
 #font-size-selector, #color-input{
@@ -45,8 +52,39 @@ a{
     height: 30px;
 }
 
+/* Кнопки форматирования */
+.bold-button{
+    background-image: url(assets/bold.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.button-italic{
+    background-image: url(assets/italic.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.button-inderline{
+    background-image: url(assets/underlined.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.indent-increase{
+    background-image: url(assets/indent_increase.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.indent-decrease{
+    background-image: url(assets/indent_decrease.svg);
+    background-size: cover;
+    background-position: center;
+}
+
 .image-button{
-    background-image: url(assets/picture.png);
+    background-image: url(assets/image.svg);
     background-size: cover;
     background-position: center;
 }
@@ -57,6 +95,15 @@ a{
     background-position: center;
 }
 
+.font-changer{
+
+}
+
+.button-save{
+    background-image: url(assets/save.svg);
+    background-size: cover;
+    background-position: center;
+}
 
 
 

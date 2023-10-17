@@ -9,11 +9,12 @@
     
     <div class="conteiner-button-function">
         <div class="conteiner-text-format">
-            <button onclick="saveFile()">save</button>
-            <button class="toggle-button bold-button" id="bold-button" onclick="toggleBold()">Ж</button>
-            <button class="toggle-button button-italic" onclick="toggleItalic()">K</button>
-            <button class="toggle-button button-inderline" onclick="toggleUnderline()">Ч</button>
+            <button class="toggle-button button-save" onclick="saveFile()"></button>
+            <button class="toggle-button bold-button" id="bold-button" onclick="toggleBold()"></button>
+            <button class="toggle-button button-italic" onclick="toggleItalic()"></button>
+            <button class="toggle-button button-inderline" onclick="toggleUnderline()"></button>
 
+            <img class="icon" src="assets/size.svg">
             <select id="font-size-selector" onchange="changeFontSize()">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -25,6 +26,8 @@
             </select>
 
             <input type="color" id="color-input" onchange="changeTextColor()">
+
+            <img class="icon" src="assets/line_spacing.svg">
             <select onchange="changeLineHeight()" id="line-height">
                 <option value="1">1</option>
                 <option value="1.15">1.15</option>
@@ -34,10 +37,11 @@
                 <option value="3">3</option>
             </select>
 
-            <button class="toggle-button" onclick="rightIndent()">-></button>
-            <button class="toggle-button" onclick="leftIndent()"><-</button>
+            <button class="toggle-button indent-decrease" onclick="leftIndent()"></button>
+            <button class="toggle-button  indent-increase" onclick="rightIndent()"></button>
+           
 
-            <select id="font-selector" onchange="toggleFont()">
+            <select class="font-changer" id="font-selector" onchange="toggleFont()">
                 <option value="Arial">Arial</option>
                 <option value="Calibri">Calibri</option>
                 <option value="Dubai">Dubai</option>
@@ -45,7 +49,7 @@
                 <option value="Impact">Impact</option>
             </select>
 
-            <button class="toggle-button image-button" onclick="insertImage()"></button>
+            <!-- <button class="toggle-button image-button" onclick="insertImage()"></button> -->
             <button class="toggle-button insert-link" onclick="insertLink()"></button>
         </div>
     </div>
