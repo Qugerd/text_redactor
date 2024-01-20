@@ -118,7 +118,7 @@ a{
 }
 
 .text-field{
-    height: 1100px;
+    height: 900px;
     width: 800px;
     background-color: rgb(255, 255, 255);
 
@@ -128,3 +128,46 @@ a{
 .text-field:focus{
     outline: none;
 }
+
+.conteiner-style{
+    height: 50px;
+    width: 200px;
+    margin-left: 5px;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+}
+
+.btn-style{
+    height: 40px;
+    width: 130px;
+    margin-right: 5px;
+}
+
+
+
+
+/* Изменение скроллбара */
+
+/* Стиль для горизонтального скролл-бара */
+.conteiner-style::-webkit-scrollbar {
+    height: 6px; /* Толщина скролл-бара */
+    border-radius: 50px;
+    padding: 1px;
+  }
+
+  /* Стиль для ползунка горизонтального скролл-бара */
+.conteiner-style::-webkit-scrollbar-thumb {
+    background-color: grey; /* Цвет ползунка */
+    width: 4px;
+    border-radius: 50px;
+  }
+
+  /* Стиль для фона горизонтального скролл-бара */
+.conteiner-style::-webkit-scrollbar-track {
+    background-color: white; /* Цвет фона */
+    border-radius: 50px;
+  }
+
+
+
