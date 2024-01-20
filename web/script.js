@@ -148,3 +148,47 @@ document.getElementById("text-editor").addEventListener("click", function(event)
         window.open(url, "_blank"); // Открываем ссылку в новой вкладке
     }
 });
+
+
+var pageCount = 1
+
+document.addEventListener('DOMContentLoaded', function() {
+    var containerTextInput = document.getElementById('conteiner-text-input');
+    var textEditor = document.querySelector('.text-field');
+    
+    function createNewPage() {
+        // Create a new page (in this example, just appending a new div)
+        var newPage = document.createElement('div');
+        newPage.classList.add('text-field');
+        newPage.contentEditable = true;
+
+        var conteinerPage = document.createElement('div')
+        conteinerPage.classList.add('conteiner-page')
+        conteinerPage.appendChild(newPage)
+
+        pageCount = pageCount + 1
+        var numberPage = document.createElement('div')
+        numberPage.innerHTML = pageCount
+        numberPage.classList.add('number-page')
+        conteinerPage.appendChild(numberPage)
+
+        containerTextInput.appendChild(conteinerPage);
+
+        console.log(newPage.scrollHeight)
+        console.log(newPage.clientHeight)
+    
+        // Attach the input event listener to the new page
+        newPage.addEventListener('input', function() {
+            if (newPage.scrollHeight > newPage.clientHeight) {
+                // If the content height is still greater, create another new page
+                createNewPage();
+            }
+        });
+    }
+    
+    textEditor.addEventListener('input', function() {
+        if (textEditor.scrollHeight  > textEditor.clientHeight) {
+            createNewPage();
+        }
+    });
+});

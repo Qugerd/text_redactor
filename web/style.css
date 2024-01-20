@@ -14,6 +14,9 @@ a{
 
     background-color: rgba(2, 2, 2, 0.1);
     display: flex;
+
+    position: relative;
+    z-index: 1;
 }
 
 .conteiner-text-format{
@@ -109,24 +112,43 @@ a{
 
 .conteiner-text-input{
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgb(230, 227, 227);
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    z-index: 0;
+}
+
+.conteiner-page{
+    position: relative;
 }
 
 .text-field{
-    height: 900px;
-    width: 800px;
-    background-color: rgb(255, 255, 255);
-
     padding: 50px 30px 30px 80px;
+
+    width: 600px;
+    min-height: 800px;
+    max-height: 800px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    background-color: rgb(255, 255, 255);
 }
 
 .text-field:focus{
     outline: none;
+}
+
+.number-page{
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
 }
 
 .conteiner-style{
@@ -149,13 +171,17 @@ a{
 
 /* Изменение скроллбара */
 
+
+
+
+
 /* Стиль для горизонтального скролл-бара */
 .conteiner-style::-webkit-scrollbar {
     height: 6px; /* Толщина скролл-бара */
     border-radius: 50px;
     padding: 1px;
   }
-
+  
   /* Стиль для ползунка горизонтального скролл-бара */
 .conteiner-style::-webkit-scrollbar-thumb {
     background-color: grey; /* Цвет ползунка */
@@ -168,6 +194,6 @@ a{
     background-color: white; /* Цвет фона */
     border-radius: 50px;
   }
-
+  
 
 
