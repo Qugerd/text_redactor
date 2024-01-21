@@ -164,6 +164,7 @@ a{
     height: 40px;
     width: 130px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 
@@ -197,3 +198,51 @@ a{
   
 
 
+
+
+/* POPup menu */
+.pop-conteiner{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.9);
+    visibility: hidden;
+}
+
+.open{
+    visibility: visible;
+}
+
+.popmenu{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(230, 227, 227);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-close{
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+
+.input{
+    height: 24px;
+    margin: 20px 50px 0px 50px;
+}
+
+#confirmBtn{
+    height: 30px;
+    margin: 50px 150px;
+
+    cursor: pointer;
+}

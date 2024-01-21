@@ -192,3 +192,60 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+function DefaultStyle(){
+    document.execCommand("fontName", false, 'Arial');
+    document.execCommand("fontSize", false, 5);
+    document.execCommand("foreColor", false, 'black');
+}
+
+function OpenPopUp(){
+    var x = document.getElementById('pop-conteiner')
+    x.classList.add('open')
+}
+
+function ClosePopUp(){
+    var x = document.getElementById('pop-conteiner')
+    x.classList.remove('open')
+}
+
+function CreateBtnStyle(){
+    var conteinerStyle = document.getElementById('conteiner-style')
+
+    var nameStyle = document.getElementById('nameStyle').value
+
+    var nameFont = document.getElementById('nameFont').value
+
+    var sizeFont = document.getElementById('sizeFont').value
+
+    var colorFont = document.getElementById('sizeFont').value
+    console.log(colorFont)
+
+    var boldCheck = document.getElementById('boldCheck').value
+
+    var italicCheck = document.getElementById('italicCheck').value
+
+    var underlineCheck = document.getElementById('underlineCheck').value
+
+    var newBtn = document.createElement('button')
+    newBtn.innerHTML = nameStyle
+    newBtn.classList.add('btn-style')
+    newBtn.onclick = function(){
+        btnStyle(nameFont, sizeFont, colorFont, boldCheck, italicCheck, underlineCheck)
+    }
+
+    var lastChild = conteinerStyle.lastElementChild
+
+    conteinerStyle.insertBefore(newBtn, lastChild)
+}
+
+function btnStyle(nameFont, sizeFont, colorFont, boldCheck){
+    document.execCommand("fontName", false, nameFont);
+    document.execCommand("fontSize", false, sizeFont);
+    document.execCommand("foreColor", false, colorFont);
+    document.execCommand("bold", false, boldCheck);
+    document.execCommand("italic", false, italicCheck);
+    document.execCommand("underline", false, underlineCheck);
+}
+

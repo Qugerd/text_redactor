@@ -51,10 +51,10 @@
 
             <!-- <button class="toggle-button image-button" onclick="insertImage()"></button> -->
             <button class="toggle-button insert-link" onclick="insertLink()"></button>
-            <div class="conteiner-style"> 
-                <button class="btn-style">Обычный</button>
-                <button class="btn-style">Заголвок</button>
-                <button class="btn-style">Создать стиль</button>
+            <div class="conteiner-style" id="conteiner-style"> 
+                <button class="btn-style" onclick="DefaultStyle()">Обычный</button>
+                <button class="btn-style" onclick="">Заголвок</button>
+                <button class="btn-style" onclick="OpenPopUp()">Создать стиль</button>
             </div>
         </div>
     </div>
@@ -62,12 +62,44 @@
 
     <div class="conteiner-text-input" id="conteiner-text-input">
         <div class="conteiner-page">
-            <div class="text-field" id="text-editor" contenteditable="true"></div>
+            <div class="text-field" id="text-editor" contenteditable="true">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, recusandae non. Eius maiores provident exercitationem beatae corporis laudantium non illum repudiandae quo voluptatem aliquid, est alias. Reiciendis inventore dicta eaque commodi ad enim unde, quam, aliquam harum iure, alias distinctio. Maiores vero illum enim commodi, tempore unde dicta. Corrupti minus, quaerat id aut, autem ipsam in quae, deserunt veritatis commodi minima quasi eligendi voluptate non fugit! Officiis perferendis maiores dolore incidunt? Dolor labore dignissimos repudiandae! Animi ut doloribus exercitationem beatae, dolore quidem laudantium cumque sed porro eveniet itaque necessitatibus, quia incidunt esse, quisquam eius quam aliquid perferendis a iure? Necessitatibus!
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse omnis, officia quae fugiat obcaecati voluptatum nihil enim aperiam possimus distinctio dolorum corrupti voluptatem doloremque optio, quis facilis, error impedit repudiandae hic. Hic voluptas id deserunt autem voluptate corporis officiis, vel animi aliquam quisquam veritatis exercitationem amet obcaecati quaerat, nostrum fugiat culpa esse soluta nesciunt! Aliquam omnis excepturi repudiandae dicta est itaque harum tempore natus molestiae sunt rerum doloribus illum, impedit veniam? Labore quaerat non culpa, ea nesciunt rem adipisci minus dolorem ipsa magni vitae porro dolorum exercitationem optio totam ipsam aperiam praesentium sapiente accusamus. Sit ab quae doloribus tempora expedita.
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aut amet ut repellat facere ad sunt in veritatis accusantium vitae hic deserunt officia, dicta, sed ratione incidunt blanditiis delectus voluptas! Necessitatibus iure dolorum accusantium eligendi doloremque voluptatibus numquam quaerat voluptates, recusandae, ex optio velit reiciendis expedita facilis quas, assumenda ad provident itaque fuga illum laboriosam. Magnam recusandae minus vero, error fugiat, aliquid veritatis eligendi, commodi perspiciatis totam voluptate repellat natus alias ullam. Nulla voluptas eum vero id assumenda esse quis consequatur obcaecati nam accusamus eaque ut ex maxime, ullam laboriosam eveniet labore qui recusandae, minus quidem illo! Optio necessitatibus laudantium dolor quasi harum repellendus, nobis dolores, magnam nihil tempore hic? Odio culpa earum quos ipsa modi ex quaerat, illo in aliquam excepturi consequatur placeat, ut aspernatur cum magnam saepe at nobis non impedit, nulla minus architecto facere nihil perferendis? Animi tempora natus suscipit optio soluta tempore reprehenderit neque distinctio tenetur veritatis, recusandae iste quam, repudiandae aliquid rem ut ipsum? Quia architecto accusantium, non voluptatum exercitationem suscipit, nulla, nesciunt sequi dolor iure maxime voluptas impedit sed ad! Neque architecto repellat alias, in sequi ullam consequuntur nostrum. Deleniti eligendi, hic impedit expedita accusantium illum tempora itaque iste qui ipsum quo modi molestiae.
+            </div>
             <div class="number-page">1</div>
         </div>
     </div>
 
 
+    <div class="pop-conteiner" id="pop-conteiner">
+        <div class="popmenu">
+            <button class="btn-close" onclick="ClosePopUp()">X</button>
+            <input class="input" id="nameStyle" type="text" placeholder="Введите назание стиля">
+            <input class="input" id="nameFont" type="text" placeholder="Название шрифта">
+            <input class="input" id="sizeFont" type="text" placeholder="Размер текста">
+
+            <label for="colorFont">
+                <input class="input" id="colorFont" type="color" placeholder="Цвет текста">Выбрать цвет
+            </label>
+
+            <label for="boldCheck">
+                <input class="input" type="checkbox" name="bold" id="boldCheck">Выделять жирным
+            </label>
+
+            <label for="boldCheck">
+                <input class="input" type="checkbox" name="bold" id="italicCheck">Выделять курсивом
+            </label>
+
+            <label for="boldCheck">
+                <input class="input" type="checkbox" name="bold" id="underlineCheck">Подчеркивание 
+            </label>
+
+            <button id="confirmBtn" onclick="CreateBtnStyle()">Применить</button>
+        </div>
+    </div>
  
 
     <script src="script.js"></script>
